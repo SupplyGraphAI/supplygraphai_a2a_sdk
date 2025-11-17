@@ -12,7 +12,6 @@ client = AgentClient(
 )
 ```
 
----
 
 ## 2. High-Level Agent Wrapper (Recommended)
 
@@ -25,7 +24,6 @@ resp = agent.run("Importing 100kg of ice cream from China")
 print(resp)
 ```
 
----
 
 ## 3. A2A Response Structure (Simplified for Developers)
 
@@ -52,7 +50,6 @@ Developer essentials:
 - `data.content` → Response content (text or structured JSON)
 - `message` → Always safe to show to user
 
----
 
 # 4. Multi-Step Workflow (Core Developer Logic)
 
@@ -113,7 +110,6 @@ while True:
         break
 ```
 
----
 
 # 5. Handling `data.content` (Text & Structured JSON)
 
@@ -127,7 +123,6 @@ elif isinstance(content, dict) and content.get("type") == "result":
     print("Structured:", content["data"])
 ```
 
----
 
 # 6. Streaming Mode (THINKING events)
 
@@ -153,7 +148,6 @@ for ev in events:
         print("> ", r)
 ```
 
----
 
 # 7. Fetching Manifest
 
@@ -163,7 +157,6 @@ print(manifest["pricing"])
 print(manifest["input_schema"])
 ```
 
----
 
 # 8. Custom Agent Wrapper
 
@@ -178,7 +171,6 @@ agent = MyCustomAgent(client)
 print(agent.run("Hello"))
 ```
 
----
 
 # 9. Adapter Ecosystem (Quick Reference)
 
@@ -187,15 +179,16 @@ These adapters are **optional** and only needed when you integrate with a specif
 
 Supported ecosystems include (non-exhaustive):
 - [**Google A2A / Gemini Agents**](./docs/adapters/google_a2a_adapter.md)
-- **LangGraph / LangChain**
-- **Semantic Kernel**
-- **CrewAI**
-- **DSPy**
-- **Flowise**
-- **LlamaIndex**
-- **MCP (ChatGPT, Cursor, Zed, etc.)**
-- **BentoML**
-- **Haystack**
+- [**LangChain**](./docs/adapters/langchain_adapter.md)
+- [**LangGraph**](./docs/adapters/langgraph_adapter.md)
+- [**Semantic Kernel**](./docs/adapters/semantic_kernel_adapter.md)
+- [**CrewAI**](./docs/adapters/crewai_adapter.md)
+- [**DSPy**](./docs/adapters/dspy_adapter.md)
+- [**Flowise**](./docs/adapters/flowise_adapter.md)
+- [**LlamaIndex**](./docs/adapters/llamaindex_adapter.py)
+- [**MCP (ChatGPT, Cursor, Zed, etc.)**](./docs/adapters/mcp_adapter.md)
+- [**BentoML**](./docs/adapters/bentoml_adapter.md)
+- [**Haystack**](./docs/adapters/haystack_adapter.md)
 
 Each adapter:
 
@@ -204,5 +197,5 @@ Each adapter:
 - Uses the same A2A lifecycle: `run → status → results` with `task_id` and streaming support
 
 Adapter-specific usage examples and best practices are provided in the dedicated docs
-(e.g. `docs/adapters/langgraph.md`, `docs/adapters/crewai.md`, etc.).
+(e.g. `docs/adapters/langgraph_adapter.md`, `docs/adapters/crewai_adapter.md`, etc.).
 
