@@ -8,7 +8,6 @@ supplygraphai_a2a_sdk/adapters/bentoml_adapter.py
 
 It explains usage, capabilities, streaming behavior, WAITING_USER handling, and the factory helpers.
 
----
 
 ## Overview
 
@@ -25,7 +24,6 @@ It is designed to:
 - Support **SSE streaming**  
 - Stay consistent with all other A2A adapters
 
----
 
 ## 1. BentoMLRunnerWrapper
 
@@ -72,7 +70,6 @@ If the agent requires more info:
 
 If `stream=True`, the wrapper returns the SSE generator directly.
 
----
 
 ## 2. BentoMLServiceWrapper
 
@@ -91,7 +88,6 @@ def run_task(data):
     return sg_service.handle_request(data)
 ```
 
----
 
 ## 3. Factory Helpers
 
@@ -111,7 +107,6 @@ from supplygraphai_a2a_sdk.adapters import create_bentoml_service
 svc_wrapper = create_bentoml_service(runner)
 ```
 
----
 
 ## 4. Full Example (Recommended)
 
@@ -132,7 +127,6 @@ def run_task(data):
     return sg_service.handle_request(data)
 ```
 
----
 
 ## 5. Error Handling
 
@@ -148,10 +142,8 @@ All SupplyGraph API errors are normalized to:
 }
 ```
 
----
 
 ## 6. Notes
 
 - The adapter is **manifest-aware** (via BaseAgent)
-- The adapter does **not** depend on BentoML
-- Host applications (not SDK) import BentoML
+- The adapter doe
