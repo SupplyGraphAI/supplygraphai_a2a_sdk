@@ -9,7 +9,6 @@ It provides:
 - Support for multi‑round workflows using `task_id`
 - Access to the agent manifest for dynamic schema generation
 
----
 
 ## Class: `FlowiseToolWrapper`
 
@@ -29,7 +28,6 @@ Arguments:
 | `api_key` | str | API key |
 | `base_url` | str | A2A gateway URL |
 
----
 
 ## Method: `tool_info()`
 
@@ -54,7 +52,6 @@ Returns Flowise metadata:
 
 Flowise uses this to display UI inputs automatically.
 
----
 
 ## Method: `call(args)`
 
@@ -79,7 +76,6 @@ tool.call({
 })
 ```
 
----
 
 ## Factory: `create_flowise_tool()`
 
@@ -91,7 +87,6 @@ from supplygraphai_a2a_sdk.adapters import create_flowise_tool
 tool = create_flowise_tool("tariff_calc", api_key="sk-...")
 ```
 
----
 
 ## Multi‑Round Flow Example
 
@@ -108,7 +103,6 @@ if resp["code"] == "WAITING_USER":
     })
 ```
 
----
 
 ## Notes for Integrators
 
