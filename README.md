@@ -178,7 +178,8 @@ The SDK includes first-class adapters for popular agent and tooling ecosystems.
 These adapters are **optional** and only needed when you integrate with a specific framework.
 
 Supported ecosystems include (non-exhaustive):
-- [**Google A2A / Gemini Agents**](./docs/adapters/google_a2a_adapter.md)
+- [**Google A2A**](./docs/adapters/google_a2a_adapter.md)
+- [**AutoGen**](./docs/adapters/autogen_adapter.md)
 - [**LangChain**](./docs/adapters/langchain_adapter.md)
 - [**LangGraph**](./docs/adapters/langgraph_adapter.md)
 - [**Semantic Kernel**](./docs/adapters/semantic_kernel_adapter.md)
@@ -189,6 +190,7 @@ Supported ecosystems include (non-exhaustive):
 - [**MCP (ChatGPT, Cursor, Zed, etc.)**](./docs/adapters/mcp_adapter.md)
 - [**BentoML**](./docs/adapters/bentoml_adapter.md)
 - [**Haystack**](./docs/adapters/haystack_adapter.md)
+- [**Airflow**](./docs/adapters/airflow_adapter.md)
 
 Each adapter:
 
