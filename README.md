@@ -186,7 +186,7 @@ The SDK includes first-class adapters for popular agent and tooling ecosystems.
 These adapters are **optional** and only needed when you integrate with a specific framework.
 
 Supported ecosystems include (non-exhaustive):
-- **Google A2A / Gemini Agents**
+- [**Google A2A / Gemini Agents**](./docs/adapters/google_a2a_adapter.md)
 - **LangGraph / LangChain**
 - **Semantic Kernel**
 - **CrewAI**
@@ -206,6 +206,3 @@ Each adapter:
 Adapter-specific usage examples and best practices are provided in the dedicated docs
 (e.g. `docs/adapters/langgraph.md`, `docs/adapters/crewai.md`, etc.).
 
----
-
-# End of Developer Lite Guide
