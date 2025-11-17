@@ -5,7 +5,6 @@ The **LangChain Adapter** allows any SupplyGraph A2A agent to be used as a nativ
 
 File: `langchain_adapter.py`
 
----
 
 ## Features
 - Works with **langchain.tools.Tool**
@@ -17,7 +16,6 @@ File: `langchain_adapter.py`
   - results()
   - streaming mode
 
----
 
 ## Usage: LangChain Tool
 
@@ -34,7 +32,6 @@ tool = Tool(
 )
 ```
 
----
 
 ## Usage: LCEL Runnable
 
@@ -49,7 +46,6 @@ result = runnable({
 })
 ```
 
----
 
 ## API Details
 
@@ -62,7 +58,6 @@ sg_tool = SupplyGraphLangChainTool(
 )
 ```
 
----
 
 ### `.run(...)`
 
@@ -74,7 +69,6 @@ sg_tool = SupplyGraphLangChainTool(
 | stream   | bool      | Enable SSE |
 | kwargs   | dict      | Additional fields |
 
----
 
 ### `.as_runnable()`
 
@@ -89,7 +83,6 @@ Returns a function compatible with LangChain’s LCEL, taking:
 }
 ```
 
----
 
 ## Factory Helper
 
@@ -97,7 +90,6 @@ Returns a function compatible with LangChain’s LCEL, taking:
 tool = create_langchain_tool("tariff_calc", api_key="sk-...")
 ```
 
----
 
 ## Notes
 - Adapter does **not** import LangChain.
