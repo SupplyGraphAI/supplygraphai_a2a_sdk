@@ -186,7 +186,7 @@ Supported ecosystems include (non-exhaustive):
 - [**CrewAI**](./docs/adapters/crewai_adapter.md)
 - [**DSPy**](./docs/adapters/dspy_adapter.md)
 - [**Flowise**](./docs/adapters/flowise_adapter.md)
-- [**LlamaIndex**](./docs/adapters/llamaindex_adapter.py)
+- [**LlamaIndex**](./docs/adapters/llamaindex_adapter.md)
 - [**MCP (ChatGPT, Cursor, Zed, etc.)**](./docs/adapters/mcp_adapter.md)
 - [**BentoML**](./docs/adapters/bentoml_adapter.md)
 - [**Haystack**](./docs/adapters/haystack_adapter.md)
