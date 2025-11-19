@@ -9,7 +9,6 @@ The adapter enables any SupplyGraph Agent to be exposed as an **async Semantic K
 - Manifest‑aware metadata  
 - Async‑safe execution via `run_in_executor`
 
----
 
 ## 📌 File: `semantic_kernel_adapter.py`
 
@@ -111,7 +110,6 @@ def make_semantic_skill(
     return skill
 ```
 
----
 
 ## ✅ **What this adapter provides**
 
@@ -122,7 +120,6 @@ loop.run_in_executor(None, lambda: agent.run(...))
 ```
 This prevents blocking the SK event loop.
 
----
 
 ### **2. Streaming support (THINKING frames)**
 When `stream=True`:
@@ -130,7 +127,6 @@ When `stream=True`:
 - The adapter wraps it into an async generator  
 - Semantic Kernel can iterate normally
 
----
 
 ### **3. Multi-round task continuation**
 The adapter recognizes `WAITING_USER` via:
@@ -148,7 +144,6 @@ And returns a structured task‑continuation payload:
 }
 ```
 
----
 
 ### **4. Manifest-aware metadata**
 Automatically exposes:

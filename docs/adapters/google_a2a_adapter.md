@@ -4,7 +4,6 @@
 The `GoogleA2AAdapter` enables SupplyGraph A2A agents to be used with **Google-style A2A RPC (task.run / task.status / task.results)**.  
 It converts RPC-style JSON calls into actual SupplyGraph REST operations.
 
----
 
 ## Class: `GoogleA2AAdapter`
 
@@ -16,7 +15,6 @@ adapter = GoogleA2AAdapter(
 )
 ```
 
----
 
 ## RPC Entry Point
 
@@ -38,7 +36,6 @@ adapter.call("a2a.task.run", {
 })
 ```
 
----
 
 ## Behavior Summary
 
@@ -65,7 +62,6 @@ WAITING_USER is normalized:
 }
 ```
 
----
 
 ### ✔ `task.status`
 ```python
@@ -75,7 +71,6 @@ adapter.call("task.status", {
 })
 ```
 
----
 
 ### ✔ `task.results`
 ```python
@@ -85,7 +80,6 @@ adapter.call("task.results", {
 })
 ```
 
----
 
 ## Error Handling
 
@@ -111,7 +105,6 @@ Mapped from SupplyGraph errors when possible:
 }
 ```
 
----
 
 ## File Generated
 This document is the official adapter reference for Google A2A.

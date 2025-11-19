@@ -4,8 +4,7 @@
 @Author  : SupplyGraph AI
 @Site    : 
 @File    : google_a2a_adapter.py
-"""
-"""
+
 Google A2A Adapter for SupplyGraph A2A Agents
 Converts Google-style RPC calls (task.run/status/results)
 into SupplyGraph A2A REST operations.
@@ -13,8 +12,8 @@ into SupplyGraph A2A REST operations.
 
 from typing import Any, Dict, Optional
 
-from ..client.agent_client import AgentClient
-from ..utils.error_handler import SupplyGraphAPIError
+from supplygraphai_a2a_sdk.client.agent_client import AgentClient
+from supplygraphai_a2a_sdk.utils.error_handler import SupplyGraphAPIError
 
 
 class GoogleA2AAdapter:

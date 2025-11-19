@@ -9,7 +9,6 @@ The `CrewAITool` adapter exposes any SupplyGraph A2A Agent as a **CrewAI Tool**,
 - Auto‑loading manifest (name, description)
 - Unified error handling
 
----
 
 ## Import
 
@@ -17,7 +16,6 @@ The `CrewAITool` adapter exposes any SupplyGraph A2A Agent as a **CrewAI Tool**,
 from supplygraphai_a2a_sdk.adapters import CrewAITool
 ```
 
----
 
 ## Basic Usage
 
@@ -35,7 +33,6 @@ resp = sg_tool.run("Import 100kg ice cream from CN")
 print(resp)
 ```
 
----
 
 ## Multi‑Round Tasks
 
@@ -57,7 +54,6 @@ Your CrewAI code should then call:
 sg_tool.run("China", task_id="tsk_123")
 ```
 
----
 
 ## Streaming Mode
 
@@ -70,7 +66,6 @@ for ev in events:
 
 You will receive SSE frames containing **THINKING** steps from the agent.
 
----
 
 ## Error Handling
 
@@ -87,7 +82,6 @@ Errors are normalized for CrewAI:
 }
 ```
 
----
 
 ## Full Class Reference
 
@@ -105,7 +99,5 @@ class CrewAITool:
     ) -> Any:
         ...
 ```
-
----
 
 This adapter enables complete compatibility between **CrewAI** and **SupplyGraph A2A Agents**, including stateful workflows and manifest‑aware behavior.

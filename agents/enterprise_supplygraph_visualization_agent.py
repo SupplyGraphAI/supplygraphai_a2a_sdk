@@ -6,7 +6,7 @@
 @File    : enterprise_supplygraph_visualization_agent.py
 """
 
-from ..client import BaseAgent
+from supplygraphai_a2a_sdk.client import BaseAgent
 
 
 class EnterpriseSupplyGraphVisualizationAgent(BaseAgent):

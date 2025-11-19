@@ -8,7 +8,7 @@
 import json
 from typing import Any, Dict, Optional, List
 
-from ..client.agent_client import AgentClient
+from supplygraphai_a2a_sdk.client.agent_client import AgentClient
 
 
 class MCPAdapter:

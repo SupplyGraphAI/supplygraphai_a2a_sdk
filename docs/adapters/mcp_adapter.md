@@ -13,7 +13,6 @@ It implements two required RPC behaviors:
 
 The adapter does **not** require any MCP packages; it implements the protocol minimally.
 
----
 
 ## MCPAdapter Class
 
@@ -26,7 +25,6 @@ mcp = MCPAdapter(
 )
 ```
 
----
 
 ## list_tools()
 
@@ -65,7 +63,6 @@ Example response:
 ]
 ```
 
----
 
 ## call_tool()
 
@@ -87,7 +84,6 @@ resp = mcp.call_tool(
 )
 ```
 
----
 
 ## Error Behavior
 
@@ -103,7 +99,6 @@ Missing `task_id`:
 {"error": "task_id is required for results"}
 ```
 
----
 
 ## Factory Helper
 
@@ -113,7 +108,6 @@ from supplygraphai_a2a_sdk.adapters import create_mcp_tool
 mcp = create_mcp_tool("tariff_calc", api_key="sk-...")
 ```
 
----
 
 ## Summary
 

@@ -16,7 +16,6 @@ This adapter:
   - `stream=True` — enables THINKING/streaming mode (SSE)
 - Provides a **factory helper** for dynamically creating new operator classes
 
----
 
 ## Installation Requirements
 
@@ -32,7 +31,6 @@ Install Airflow in your project (SDK does *not* include Airflow):
 pip install apache-airflow
 ```
 
----
 
 ## 1. Using the Mixin Directly (Recommended)
 
@@ -58,7 +56,6 @@ task = TariffCalcOperator(
 
 The operator will execute the agent and push the full A2A result into XCom.
 
----
 
 ## 2. Using the Factory Helper
 
@@ -81,7 +78,6 @@ task = TariffOperator(
 )
 ```
 
----
 
 ## 3. Supported Modes
 
@@ -91,7 +87,6 @@ task = TariffOperator(
 | `status`     | Polls task state |
 | `results`    | Fetches final output |
 
----
 
 ## 4. Multi-Round Workflow Example
 
@@ -130,7 +125,6 @@ task2 = TariffCalcOperator(
 )
 ```
 
----
 
 ## 5. Streaming Mode (THINKING Frames)
 
@@ -147,7 +141,6 @@ task = TariffCalcOperator(
 
 Airflow logs will show thinking events.
 
----
 
 ## 6. Error Handling
 
@@ -157,7 +150,6 @@ Handled via Python exceptions:
 - Unsupported modes
 - Network/API errors surfaced as `SupplyGraphAPIError`
 
----
 
 ## 7. Best Practices
 
@@ -165,7 +157,6 @@ Handled via Python exceptions:
 - Use scheduled polling tasks for long-running A2A operations  
 - Keep `execute()` idempotent in Airflow DAGs  
 
----
 
 ## 8. Class Reference
 

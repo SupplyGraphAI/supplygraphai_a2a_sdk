@@ -4,17 +4,16 @@
 @Author  : SupplyGraph AI
 @Site    : 
 @File    : langgraph_adapter.py
-"""
-"""
+
 LangGraph / LangChain Adapter for SupplyGraph A2A Agents
 Fully manifest-aware, multiround-capable, streaming-capable.
 """
 
 from typing import Any, Callable, Dict, Optional
 
-from ..client.agent_client import AgentClient
-from ..client.base_agent import BaseAgent
-from ..utils.error_handler import SupplyGraphAPIError
+from supplygraphai_a2a_sdk.client.agent_client import AgentClient
+from supplygraphai_a2a_sdk.client.base_agent import BaseAgent
+from supplygraphai_a2a_sdk.utils.error_handler import SupplyGraphAPIError
 
 
 def create_langgraph_tool(

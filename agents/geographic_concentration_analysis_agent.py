@@ -6,7 +6,7 @@
 @File    : geographic_concentration_analysis_agent.py
 """
 
-from ..client import BaseAgent
+from supplygraphai_a2a_sdk.client import BaseAgent
 
 
 class GeographicConcentrationAnalysisAgent(BaseAgent):

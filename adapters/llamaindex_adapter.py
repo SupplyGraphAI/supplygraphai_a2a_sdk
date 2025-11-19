@@ -8,7 +8,7 @@
 
 from typing import Any, Dict, Optional, Callable
 
-from ..client.agent_client import AgentClient
+from supplygraphai_a2a_sdk.client.agent_client import AgentClient
 
 
 class LlamaIndexToolWrapper:

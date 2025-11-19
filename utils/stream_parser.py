@@ -4,8 +4,7 @@
 @Author  : SupplyGraph AI
 @Site    : 
 @File    : stream_parser.py
-"""
-"""
+
 Improved SSE parser for SupplyGraph A2A Agents
 Compatible with full SSE standard + SupplyGraph THINKING events
 """

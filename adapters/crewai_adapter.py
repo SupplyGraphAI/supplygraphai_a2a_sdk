@@ -4,17 +4,16 @@
 @Author  : SupplyGraph AI
 @Site    : 
 @File    : crewai_adapter.py
-"""
-"""
+
 CrewAI Adapter for SupplyGraph A2A Agents
 Fully manifest-aware and multiround-capable.
 """
 
 from typing import Any, Dict, Optional
 
-from ..client.agent_client import AgentClient
-from ..client.base_agent import BaseAgent
-from ..utils.error_handler import SupplyGraphAPIError
+from supplygraphai_a2a_sdk.client.agent_client import AgentClient
+from supplygraphai_a2a_sdk.client.base_agent import BaseAgent
+from supplygraphai_a2a_sdk.utils.error_handler import SupplyGraphAPIError
 
 
 class CrewAITool:

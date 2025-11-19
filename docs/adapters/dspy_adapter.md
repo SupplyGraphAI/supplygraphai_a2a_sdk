@@ -10,17 +10,15 @@ The **DSPy Adapter** enables any SupplyGraph A2A Agent to be used as a predictor
 This adapter **does not import DSPy** directly.  
 The host application wraps the provided predictor function into DSPy modules.
 
----
 
-## 📌 Import
+## Import
 
 ```python
 from supplygraphai_a2a_sdk.adapters import create_dspy_predictor
 ```
 
----
 
-## 🧩 1. Creating a DSPy Predictor
+## 1. Creating a DSPy Predictor
 
 ```python
 from supplygraphai_a2a_sdk.adapters import create_dspy_predictor
@@ -32,9 +30,8 @@ predictor_wrapper = create_dspy_predictor(
 predict = predictor_wrapper.as_predictor()
 ```
 
----
 
-## 🧠 2. Using in a DSPy Module
+## 2. Using in a DSPy Module
 
 ```python
 import dspy
@@ -55,9 +52,8 @@ m = MyModule()
 print(m("import 100kg chocolate from FR"))
 ```
 
----
 
-## ⚙️ 3. Predictor Interface
+## 3. Predictor Interface
 
 The predictor follows DSPy's expected signature:
 
@@ -79,9 +75,8 @@ output = predictor(
 | `"status"`  | Query status of a running multiround agent task |
 | `"results"` | Fetch final results for a completed task |
 
----
 
-## 🔁 Multi‑Round Workflow Support
+## Multi‑Round Workflow Support
 
 If the DSPy model must continue a task:
 
@@ -96,9 +91,8 @@ resp2 = predict(
 )
 ```
 
----
 
-## 🌊 Streaming Support
+## Streaming Support
 
 ```python
 predict(text="...", stream=True)
@@ -106,18 +100,16 @@ predict(text="...", stream=True)
 
 Returns an **SSE generator**, identical to core A2A behavior.
 
----
 
-## 🏗️ Factory Helper
+## Factory Helper
 
 ```python
 sg = create_dspy_predictor("agent_id", api_key="sk-...")
 predict = sg.as_predictor()
 ```
 
----
 
-## 📄 Source Overview
+## Source Overview
 
 The adapter provides:
 
@@ -126,9 +118,8 @@ The adapter provides:
 
 No external dependencies are added to the SDK.
 
----
 
-## ✅ Example Output
+## Example Output
 
 ```json
 {
@@ -140,9 +131,3 @@ No external dependencies are added to the SDK.
   }
 }
 ```
-
----
-
-## 📥 Download
-
-This markdown file documents the complete DSPy integration for SupplyGraph A2A SDK.

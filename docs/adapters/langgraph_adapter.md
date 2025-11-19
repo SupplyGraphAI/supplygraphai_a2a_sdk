@@ -4,7 +4,6 @@ This document describes how to use the **LangGraph / LangChain adapter** for Sup
 
 Adapter source file: `adapters/langgraph_adapter.py`
 
----
 
 ## Overview
 
@@ -43,7 +42,6 @@ tool(
 ) -> Any
 ```
 
----
 
 ## Import and Initialization
 
@@ -74,7 +72,6 @@ Internally this will:
 
 This makes it much easier to auto-register tools in LangGraph / LangChain based on manifest info.
 
----
 
 ## Basic Usage (Single-Turn)
 
@@ -108,7 +105,6 @@ The response is the standard SupplyGraph A2A envelope, e.g.:
 }
 ```
 
----
 
 ## Multi-Round Workflow (task_id)
 
@@ -133,7 +129,6 @@ if code == "WAITING_USER":
 
 When the underlying agent returns `WAITING_USER`, the adapter will **not** obscure the structure. It simply returns the original envelope so you can implement your own interaction loop or let LangGraph manage the continuation logic.
 
----
 
 ## Handling WAITING_USER (Helper Structure)
 
@@ -163,7 +158,6 @@ The adapter **does not** auto-convert this into another shape; it keeps the A2A 
 
 > Note: for CrewAI / Google-A2A adapters we provide more specialized mappings. For LangGraph we keep it closer to raw A2A so users can design their own graph logic.
 
----
 
 ## Streaming Mode (THINKING / SSE)
 
@@ -196,7 +190,6 @@ In LangGraph, you can either:
 - Wrap this generator into a custom node that surfaces incremental reasoning to the user UI, or
 - Consume the generator internally and only emit the final state to the graph state.
 
----
 
 ## Using in LangGraph
 
@@ -221,7 +214,6 @@ app = graph.compile()
 
 You can then add other nodes that read `state["a2a_response"]`, check `code` / `data.content`, and route accordingly.
 
----
 
 ## Using in LangChain
 
@@ -262,7 +254,6 @@ def a2a_runnable(input_dict):
 
 You can then plug `a2a_runnable` into a LangChain / LCEL pipeline.
 
----
 
 ## Error Handling
 
@@ -280,7 +271,6 @@ If the underlying A2A gateway raises a `SupplyGraphAPIError`, the adapter catche
 
 You can check `status == "ERROR"` inside your graph or chain, and route failures to a separate handler node or fallback strategy.
 
----
 
 ## Summary
 

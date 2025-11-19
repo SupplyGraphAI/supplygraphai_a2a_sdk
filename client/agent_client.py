@@ -4,8 +4,7 @@
 @Author  : SupplyGraph AI
 @Site    : 
 @File    : agent_client.py.py
-"""
-"""
+
 AgentClient — fully manifest-aware implementation for SupplyGraph A2A
 """
 
@@ -14,9 +13,9 @@ from typing import Any, Dict, Generator, Optional, Union
 
 import requests
 
-from .auth import get_auth_header
-from ..utils.stream_parser import parse_sse
-from ..utils.error_handler import SupplyGraphAPIError
+from supplygraphai_a2a_sdk.client.auth import get_auth_header
+from supplygraphai_a2a_sdk.utils.stream_parser import parse_sse
+from supplygraphai_a2a_sdk.utils.error_handler import SupplyGraphAPIError
 
 
 A2A_NON_FATAL_CODES = {"WAITING_USER", "INTERPRETING"}  # not errors
@@ -93,6 +92,7 @@ class AgentClient:
                     headers=headers,
                     timeout=self.timeout,
                     stream=stream,
+                    proxies={"http": None, "https": None},
                 )
             except requests.RequestException as e:
                 error = SupplyGraphAPIError(

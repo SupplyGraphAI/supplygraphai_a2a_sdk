@@ -3,67 +3,111 @@
 """
 @Author  : SupplyGraph AI
 @Site    : 
-@File    : __init__.py.py
-"""
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
+@File    : __init__.py
+
 Public export surface for all SupplyGraph A2A Adapters.
 """
 
-from .airflow_adapter import (
+# ---------------------------------------------------------
+# Airflow Adapter
+# ---------------------------------------------------------
+from supplygraphai_a2a_sdk.adapters.airflow_adapter import (
     SupplyGraphAirflowOperatorMixin,
     create_airflow_operator,
 )
 
-from .autogen_adapter import AutoGenTool
+# ---------------------------------------------------------
+# AutoGen Adapter
+# ---------------------------------------------------------
+from supplygraphai_a2a_sdk.adapters.autogen_adapter import AutoGenTool
 
-from .bentoml_adapter import (
+# ---------------------------------------------------------
+# BentoML Adapter
+# ---------------------------------------------------------
+from supplygraphai_a2a_sdk.adapters.bentoml_adapter import (
     BentoMLRunnerWrapper,
     BentoMLServiceWrapper,
     create_bentoml_runner,
     create_bentoml_service,
 )
 
-from .crewai_adapter import CrewAITool
+# ---------------------------------------------------------
+# CrewAI Adapter
+# ---------------------------------------------------------
+from supplygraphai_a2a_sdk.adapters.crewai_adapter import CrewAITool
 
-from .dspy_adapter import (
+# ---------------------------------------------------------
+# DSPy Adapter
+# ---------------------------------------------------------
+from supplygraphai_a2a_sdk.adapters.dspy_adapter import (
     DSPyPredictorWrapper,
-    create_dspy_predictor
+    create_dspy_predictor,
 )
 
-from .flowise_adapter import (
+# ---------------------------------------------------------
+# Flowise Adapter
+# ---------------------------------------------------------
+from supplygraphai_a2a_sdk.adapters.flowise_adapter import (
     FlowiseToolWrapper,
-    create_flowise_tool
+    create_flowise_tool,
 )
 
-from .google_a2a_adapter import GoogleA2AAdapter
+# ---------------------------------------------------------
+# Google A2A Adapter
+# ---------------------------------------------------------
+from supplygraphai_a2a_sdk.adapters.google_a2a_adapter import GoogleA2AAdapter
 
-from .haystack_adapter import (
+# ---------------------------------------------------------
+# Haystack Adapter
+# ---------------------------------------------------------
+from supplygraphai_a2a_sdk.adapters.haystack_adapter import (
     SupplyGraphHaystackNode,
     create_haystack_node,
 )
 
-from .langchain_adapter import (
+# ---------------------------------------------------------
+# LangChain Adapter
+# ---------------------------------------------------------
+from supplygraphai_a2a_sdk.adapters.langchain_adapter import (
     SupplyGraphLangChainTool,
     create_langchain_tool,
 )
 
-from .langgraph_adapter import create_langgraph_tool
+# ---------------------------------------------------------
+# LangGraph Adapter
+# ---------------------------------------------------------
+from supplygraphai_a2a_sdk.adapters.langgraph_adapter import create_langgraph_tool
 
-from .llamaindex_adapter import (
+# ---------------------------------------------------------
+# LlamaIndex Adapter
+# ---------------------------------------------------------
+from supplygraphai_a2a_sdk.adapters.llamaindex_adapter import (
     LlamaIndexToolWrapper,
     create_llamaindex_tool,
 )
 
-from .mcp_adapter import (
+# ---------------------------------------------------------
+# MCP Adapter
+# ---------------------------------------------------------
+from supplygraphai_a2a_sdk.adapters.mcp_adapter import (
     MCPAdapter,
-    create_mcp_tool
+    create_mcp_tool,
 )
 
-from .semantic_kernel_adapter import make_semantic_skill
+# ---------------------------------------------------------
+# Semantic Kernel Adapter
+# ---------------------------------------------------------
+from supplygraphai_a2a_sdk.adapters.semantic_kernel_adapter import make_semantic_skill
+
+# ---------------------------------------------------------
+# OpenAI A2A Adapter (NEW)
+# ---------------------------------------------------------
+from supplygraphai_a2a_sdk.adapters.openai_a2a_adapter import OpenAIA2AAdapter
 
 
+# ---------------------------------------------------------
+# Public Exports
+# ---------------------------------------------------------
 __all__ = [
     # Airflow
     "SupplyGraphAirflowOperatorMixin",
@@ -113,4 +157,7 @@ __all__ = [
 
     # Semantic Kernel
     "make_semantic_skill",
+
+    # OpenAI A2A
+    "OpenAIA2AAdapter",
 ]

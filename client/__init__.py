@@ -5,8 +5,8 @@
 @Site    : 
 @File    : __init__.py.py
 """
-from .agent_client import AgentClient
-from .base_agent import BaseAgent
+from supplygraphai_a2a_sdk.client.agent_client import AgentClient
+from supplygraphai_a2a_sdk.client.base_agent import BaseAgent
 
 __all__ = ["AgentClient", "BaseAgent"]
 

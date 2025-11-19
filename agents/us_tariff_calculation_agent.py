@@ -6,7 +6,7 @@
 @File    : us_tariff_calculation_agent.py
 """
 
-from ..client import BaseAgent
+from supplygraphai_a2a_sdk.client import BaseAgent
 
 
 class USTariffCalculationAgent(BaseAgent):

@@ -2,34 +2,35 @@
 # -*- coding: utf-8 -*-
 """
 @Author  : SupplyGraph AI
+@Site    :
 @File    : airflow_adapter.py
-@Description:
-    Airflow integration adapter for SupplyGraph A2A agents.
 
-    This module does NOT import Airflow directly. This avoids introducing
-    Airflow as a dependency inside the SDK. Instead, users can mix this class
-    into any Airflow BaseOperator within their own Airflow project.
+Airflow integration adapter for SupplyGraph A2A agents.
 
-    Example usage inside an Airflow project:
+This module does NOT import Airflow directly. This avoids introducing
+Airflow as a dependency inside the SDK. Instead, users can mix this class
+into any Airflow BaseOperator within their own Airflow project.
 
-        from airflow.models import BaseOperator
-        from supplygraphai_a2a_sdk.adapters.airflow_adapter import SupplyGraphAirflowOperatorMixin
+Example usage inside an Airflow project:
 
-        class TariffCalcOperator(BaseOperator, SupplyGraphAirflowOperatorMixin):
-            pass
+    from airflow.models import BaseOperator
+    from supplygraphai_a2a_sdk.adapters.airflow_adapter import SupplyGraphAirflowOperatorMixin
 
-        task = TariffCalcOperator(
-            task_id="tariff_job",
-            agent_id="tariff_calc",
-            api_key="sk-...",
-            text="import 100kg ice cream from CN",
-            mode="run",
-            task_id_override=None,
-        )
+    class TariffCalcOperator(BaseOperator, SupplyGraphAirflowOperatorMixin):
+        pass
+
+    task = TariffCalcOperator(
+        task_id="tariff_job",
+        agent_id="tariff_calc",
+        api_key="sk-...",
+        text="import 100kg ice cream from CN",
+        mode="run",
+        task_id_override=None,
+    )
 """
 
 from typing import Any, Dict, Optional
-from ..client.agent_client import AgentClient
+from supplygraphai_a2a_sdk.client.agent_client import AgentClient
 
 
 class SupplyGraphAirflowOperatorMixin:

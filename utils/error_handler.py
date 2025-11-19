@@ -4,8 +4,7 @@
 @Author  : SupplyGraph AI
 @Site    : 
 @File    : error_handler.py
-"""
-"""
+
 Enhanced API error model for SupplyGraph A2A
 Matches manifest error schema exactly
 """

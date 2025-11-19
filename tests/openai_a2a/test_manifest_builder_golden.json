@@ -1,0 +1,84 @@
+{
+  "input_tariff_agent": {
+    "agent_id": "tariff_calc",
+    "name": "U.S. Tariff Calculation Agent",
+    "version": "1.0.0",
+    "description": "Calculates U.S. customs duties...",
+    "capabilities": ["run", "status", "results"],
+    "protocol": {
+      "streaming": true,
+      "base_url": "https://agent.supplygraph.ai/v1/agents/tariff_calc",
+      "endpoints": {
+        "run": "/run",
+        "manifest": "/manifest"
+      },
+      "methods": ["GET", "POST"]
+    },
+    "input_schema": {"type": "object"},
+    "output_schema": {"type": "object"},
+    "pricing": {"unit": "credits", "per_run": 10},
+    "auth": {"required": true}
+  },
+
+  "output_tariff_agent": {
+    "object": "agent",
+    "id": "tariff_calc",
+    "name": "U.S. Tariff Calculation Agent",
+    "version": "1.0.0",
+    "description": "Calculates U.S. customs duties...",
+    "type": "agent",
+    "capabilities": {
+      "manifest": true,
+      "run": true,
+      "status": true,
+      "results": true,
+      "streaming": true
+    },
+    "input_schema": {"type": "object"},
+    "output_schema": {"type": "object"},
+    "pricing": {"unit": "credits", "per_run": 10},
+    "metadata": {
+      "organization": null,
+      "category": null,
+      "tags": [],
+      "model_type": null,
+      "protocol_version": null,
+      "documentation_url": null,
+      "created_at": null,
+      "updated_at": null,
+      "streaming": true,
+      "endpoints": {
+        "run": "/run",
+        "manifest": "/manifest"
+      }
+    },
+    "api_key_required": true,
+    "extended": {
+      "execution_context": null,
+      "priority": null,
+      "compatibility": {},
+      "schema_version": null,
+      "protocol": {
+        "base_url": "https://agent.supplygraph.ai/v1/agents/tariff_calc",
+        "endpoints": {
+          "run": "/run",
+          "manifest": "/manifest"
+        },
+        "methods": ["GET", "POST"],
+        "streaming": true
+      },
+      "lifecycle": {},
+      "interaction": {},
+      "intents": [],
+      "notes": null,
+      "auth": {"required": true},
+      "license": null,
+      "output_rights": null,
+      "output_license": null,
+      "compliance": {},
+      "usage_policy": null,
+      "localization": {},
+      "extra_fields": {}
+    }
+  }
+}

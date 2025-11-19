@@ -6,7 +6,7 @@
 @File    : supplier_due_diligence_report_agent.py
 """
 
-from ..client import BaseAgent
+from supplygraphai_a2a_sdk.client import BaseAgent
 
 
 class SupplierDueDiligenceReportAgent(BaseAgent):

@@ -6,9 +6,9 @@
 @File    : customs_classification_agent.py
 """
 
-from ..client import BaseAgent
+from supplygraphai_a2a_sdk.client import BaseAgent
 
 
 class CustomsClassificationAgent(BaseAgent):
     def __init__(self, client):
-        super().__init__(client, agent_id="tariff_calc")
+        super().__init__(client, agent_id="tariff_classification")

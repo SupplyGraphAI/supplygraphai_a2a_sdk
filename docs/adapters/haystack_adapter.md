@@ -7,7 +7,6 @@ It avoids importing `haystack` directly, so the SDK does **not** introduce Hayst
 
 You can integrate any SupplyGraph Agent into a Haystack pipeline by calling `sg_node.run()` inside your own node or function.
 
----
 
 ## Features
 
@@ -18,7 +17,6 @@ You can integrate any SupplyGraph Agent into a Haystack pipeline by calling `sg_
 - ✔ No dependency on Haystack inside the SDK  
 - ✔ Simple factory `create_haystack_node`  
 
----
 
 ## Installation
 
@@ -26,7 +24,6 @@ You can integrate any SupplyGraph Agent into a Haystack pipeline by calling `sg_
 pip install supplygraphai-a2a-sdk
 ```
 
----
 
 ## Importing
 
@@ -37,7 +34,6 @@ from supplygraphai_a2a_sdk.adapters.haystack_adapter import (
 )
 ```
 
----
 
 ## Usage Example — As a Pipeline Node
 
@@ -56,7 +52,6 @@ result = p.run(query="import 100kg ice cream from CN")
 print(result)
 ```
 
----
 
 ## API Reference
 
@@ -73,7 +68,6 @@ SupplyGraphHaystackNode(agent_id, api_key, base_url="")
 | `api_key` | str | Your A2A API key |
 | `base_url` | str | Custom A2A gateway URL (optional) |
 
----
 
 ### `run(query, mode="run", task_id=None, stream=False, **kwargs)`
 
@@ -93,7 +87,6 @@ Executes an A2A call following Haystack’s node conventions.
 - SSE generator (if `stream=True`)
 - `{ "error": ... }` for invalid mode or missing arguments
 
----
 
 ## Example — Multi-round Workflow
 
@@ -109,7 +102,6 @@ if resp["code"] == "WAITING_USER":
     )
 ```
 
----
 
 ## Factory Helper
 

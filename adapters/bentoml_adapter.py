@@ -4,38 +4,38 @@
 @Author  : SupplyGraph AI
 @Site    :
 @File    : bentoml_adapter.py
-@Description:
-    BentoML integration adapter for exposing SupplyGraph A2A agents
-    as BentoML Runners and Services.
 
-    This module does NOT import BentoML directly to avoid hard dependencies
-    inside the SDK. The host application can use these classes to build
-    BentoML Services without modifying the agent logic.
+BentoML integration adapter for exposing SupplyGraph A2A agents
+as BentoML Runners and Services.
 
-    Example usage inside a BentoML host application:
+This module does NOT import BentoML directly to avoid hard dependencies
+inside the SDK. The host application can use these classes to build
+BentoML Services without modifying the agent logic.
 
-        from bentoml import Service, Runner, io
-        from supplygraphai_a2a_sdk.adapters import (
-            create_bentoml_runner,
-            BentoMLServiceWrapper,
-        )
+Example usage inside a BentoML host application:
 
-        runner = Runner(create_bentoml_runner("tariff_calc", api_key="sk-...").run_task)
-        svc = Service("tariff_calc_service", runners=[runner])
-        sg_service = BentoMLServiceWrapper(runner)
+    from bentoml import Service, Runner, io
+    from supplygraphai_a2a_sdk.adapters import (
+        create_bentoml_runner,
+        BentoMLServiceWrapper,
+    )
 
-        @svc.api(input=io.JSON(), output=io.JSON())
-        def run_task(data):
-            # data is a dict, e.g.:
-            #   {"mode": "run", "text": "...", "task_id": null, "stream": false}
-            return sg_service.handle_request(data)
+    runner = Runner(create_bentoml_runner("tariff_calc", api_key="sk-...").run_task)
+    svc = Service("tariff_calc_service", runners=[runner])
+    sg_service = BentoMLServiceWrapper(runner)
+
+    @svc.api(input=io.JSON(), output=io.JSON())
+    def run_task(data):
+        # data is a dict, e.g.:
+        #   {"mode": "run", "text": "...", "task_id": null, "stream": false}
+        return sg_service.handle_request(data)
 """
 
 from typing import Any, Dict, Optional
 
-from ..client.agent_client import AgentClient
-from ..client.base_agent import BaseAgent
-from ..utils.error_handler import SupplyGraphAPIError
+from supplygraphai_a2a_sdk.client.agent_client import AgentClient
+from supplygraphai_a2a_sdk.client.base_agent import BaseAgent
+from supplygraphai_a2a_sdk.utils.error_handler import SupplyGraphAPIError
 
 
 class BentoMLRunnerWrapper:

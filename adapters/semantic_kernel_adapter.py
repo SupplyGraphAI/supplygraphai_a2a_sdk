@@ -4,8 +4,7 @@
 @Author  : SupplyGraph AI
 @Site    : 
 @File    : semantic_kernel_adapter.py
-"""
-"""
+
 Semantic Kernel Adapter for SupplyGraph A2A Agents
 Async-safe, multiround-capable, streaming-capable, manifest-aware.
 """
@@ -13,9 +12,9 @@ Async-safe, multiround-capable, streaming-capable, manifest-aware.
 import asyncio
 from typing import Any, Awaitable, Callable, Dict, Optional
 
-from ..client.agent_client import AgentClient
-from ..client.base_agent import BaseAgent
-from ..utils.error_handler import SupplyGraphAPIError
+from supplygraphai_a2a_sdk.client.agent_client import AgentClient
+from supplygraphai_a2a_sdk.client.base_agent import BaseAgent
+from supplygraphai_a2a_sdk.utils.error_handler import SupplyGraphAPIError
 
 
 def make_semantic_skill(

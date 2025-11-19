@@ -11,7 +11,6 @@ This adapter supports:
 - Fully compatible with AutoGen’s `AssistantAgent` / `Tool` APIs  
 - Zero dependency on AutoGen inside the SDK (host project imports AutoGen)
 
----
 
 ## Importing the Adapter
 
@@ -19,7 +18,6 @@ This adapter supports:
 from supplygraphai_a2a_sdk.adapters.autogen_adapter import AutoGenTool
 ```
 
----
 
 ## Creating an AutoGen Tool
 
@@ -30,7 +28,6 @@ sg_tool = AutoGenTool(
 )
 ```
 
----
 
 ## Registering the Tool in AutoGen
 
@@ -45,7 +42,6 @@ assistant = AssistantAgent(
 
 AutoGen will automatically use the tool when the model detects a call pattern matching the agent’s function.
 
----
 
 ## Running the Agent Through AutoGen
 
@@ -54,7 +50,6 @@ AutoGen will automatically use the tool when the model detects a call pattern ma
 assistant.run("Import 100kg ice cream from CN")
 ```
 
----
 
 ## Multi‑turn (task_id continuation)
 
@@ -69,7 +64,6 @@ resp2 = sg_tool.run(
 )
 ```
 
----
 
 ## API Reference
 
@@ -97,7 +91,6 @@ def tool(text: str, **kwargs) -> Any:
     ...
 ```
 
----
 
 ## Example: Full Multi‑Agent Usage
 
@@ -120,7 +113,6 @@ assistant.initiate_chat(
 )
 ```
 
----
 
 ## Notes
 
@@ -128,7 +120,6 @@ assistant.initiate_chat(
 - Error handling follows A2A unified structure.
 - No AutoGen imports inside the SDK — avoids hard dependency.
 
----
 
 ## File Info
 Adapter source file: `autogen_adapter.py`  

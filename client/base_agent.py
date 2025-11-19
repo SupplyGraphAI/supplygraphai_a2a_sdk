@@ -4,14 +4,13 @@
 @Author  : SupplyGraph AI
 @Site    : 
 @File    : base_agent.py
-"""
-"""
+
 Base class for all SupplyGraph A2A agents.
 Manifest-aware, supports multi-round execution and helper utilities.
 """
 
 from typing import Any, Dict, Optional
-from .agent_client import AgentClient
+from supplygraphai_a2a_sdk.client.agent_client import AgentClient
 
 
 class BaseAgent:
