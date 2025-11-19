@@ -100,4 +100,8 @@ class CrewAITool:
         ...
 ```
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> fc3d68b75723eb846127633d630c19c772b31c77
 This adapter enables complete compatibility between **CrewAI** and **SupplyGraph A2A Agents**, including stateful workflows and manifest‑aware behavior.

@@ -120,8 +120,11 @@ assistant.initiate_chat(
 - Error handling follows A2A unified structure.
 - No AutoGen imports inside the SDK — avoids hard dependency.
 
+<<<<<<< HEAD
 
 ## File Info
 Adapter source file: `autogen_adapter.py`  
 This documentation corresponds to the enhanced, manifest‑aware version of the adapter.
 
+=======
+>>>>>>> fc3d68b75723eb846127633d630c19c772b31c77

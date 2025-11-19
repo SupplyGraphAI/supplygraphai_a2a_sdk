@@ -146,5 +146,4 @@ All SupplyGraph API errors are normalized to:
 ## 6. Notes
 
 - The adapter is **manifest-aware** (via BaseAgent)
-- The adapter does **not** depend on BentoML
-- Host applications (not SDK) import BentoML
+- The adapter doe
