@@ -51,7 +51,7 @@ Developer essentials:
 - `message` → Always safe to show to user
 
 
-# 4. Multi-Step Workflow (Core Developer Logic)
+## 4. Multi-Step Workflow (Core Developer Logic)
 
 A2A tasks often require:
 
@@ -111,7 +111,7 @@ while True:
 ```
 
 
-# 5. Handling `data.content` (Text & Structured JSON)
+## 5. Handling `data.content` (Text & Structured JSON)
 
 ```python
 content = resp["data"]["content"]
@@ -124,7 +124,7 @@ elif isinstance(content, dict) and content.get("type") == "result":
 ```
 
 
-# 6. Streaming Mode (THINKING events)
+## 6. Streaming Mode (THINKING events)
 
 SSE frames:
 
@@ -149,7 +149,7 @@ for ev in events:
 ```
 
 
-# 7. Fetching Manifest
+## 7. Fetching Manifest
 
 ```python
 manifest = client.manifest("tariff_classification")
@@ -158,7 +158,7 @@ print(manifest["input_schema"])
 ```
 
 
-# 8. Custom Agent Wrapper
+## 8. Custom Agent Wrapper
 
 ```python
 from supplygraphai_a2a_sdk.client.base_agent import BaseAgent
@@ -172,7 +172,7 @@ print(agent.run("Hello"))
 ```
 
 
-# 9. Adapter Ecosystem (Quick Reference)
+## 9. Adapter Ecosystem (Quick Reference)
 
 The SDK includes first-class adapters for popular agent and tooling ecosystems.
 These adapters are **optional** and only needed when you integrate with a specific framework.
@@ -200,4 +200,24 @@ Each adapter:
 
 Adapter-specific usage examples and best practices are provided in the dedicated docs
 (e.g. `docs/adapters/langgraph_adapter.md`, `docs/adapters/crewai_adapter.md`, etc.).
+
+
+## 10. Related Documentation
+
+Explore more about the SupplyGraph AI ecosystem:
+
+📘 **Getting Started Guide**  
+  https://github.com/SupplyGraphAI/supplygraph-ai/blob/main/docs/getting-started.md
+
+🤖 **Agent Specifications & Library**  
+  https://github.com/SupplyGraphAI/supplygraph-ai/tree/main/docs/agents
+
+🧠 **SupplyGraph AI Documentation Hub**  
+  https://github.com/SupplyGraphAI/supplygraph-ai
+
+📦 **Python A2A SDK (Official Repository)**  
+  https://github.com/SupplyGraphAI/supplygraphai_a2a_sdk
+
+🌐 **Official Website & Use Cases**  
+  https://www.supplygraph.ai
 
